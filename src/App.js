@@ -2,10 +2,16 @@
 import React from 'react';
 import Login from "./components/Login";
 import './App.css';
+import Header from './components/Header';
+import Signup from './components/Signup';
 
-function App() {
+function App(){
   return (
-    <Login/>
+    <div className="App">
+      <Header />
+      <Signup />
+      <Login />
+    </div>
   );
 }
 
