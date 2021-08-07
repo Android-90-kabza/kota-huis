@@ -1,11 +1,17 @@
 
 import React from 'react';
-import Header from "./components/Header";
+import Login from "./components/Login";
 import './App.css';
+import Header from './components/Header';
+import Signup from './components/Signup';
 
-function App() {
+function App(){
   return (
-<Header/>
+    <div className="App">
+      <Header />
+      <Signup />
+      <Login />
+    </div>
   );
 }
 
