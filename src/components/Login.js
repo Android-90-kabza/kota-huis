@@ -93,12 +93,15 @@ export default function Login() {
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
         <form className={classes.root} noValidate autoComplete="off">
-          <TextField id="standard-basic" label="username" />
+        <TextField label="username" fullWidth required/>
+        <TextField label='Password' type='password' fullWidth required/>
         </form>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
         <form className={classes.root} noValidate autoComplete="off">
-          <TextField id="standard-basic" label="username" />
+        <TextField label="name" fullWidth required/>
+        <TextField label="surname" fullWidth required/>
+        <TextField label="mobile number" placeholder="0831231233" fullWidth required/>
         </form>
         </TabPanel>
       </SwipeableViews>
