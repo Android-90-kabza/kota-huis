@@ -29,7 +29,7 @@ export default function Header() {
     
       return (
           <nav className={classes.root}>
-              <AppBar position="static" style={{ backgroundColor: "transparent", color: "black", boxShadow: "0px 0px 0px 0px", fontFamily: ""}}>
+              <AppBar position="static" style={{ backgroundColor: "transparent", color: "black", boxShadow: "0px 0px 0px 0px"}}>
                   <Toolbar >
                       <Box pl="1rem" >
                       <Typography variant="h4" ml="2px" className={classes.title}>
