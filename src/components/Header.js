@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -12,9 +12,9 @@ import { createTheme } from '@material-ui/core/styles';
 
 const theme = createTheme({
     typography: {
-        
+
         fontFamily: [
-            'Mandali', 
+            'Mandali',
             "sans - serif"
         ].join(','),
     }
@@ -39,29 +39,28 @@ const useStyles = makeStyles((theme) => ({
 export default function Header() {
 
     const classes = useStyles();
-    
-      return (
-          <nav className={classes.root}>
-              <ThemeProvider theme={theme}>
-              <AppBar position="static" style={{ backgroundColor: "transparent", color: "black", boxShadow: "0px 0px 0px 0px" }}>
-                  <Toolbar >
-                      <Box pl="1rem" >
-                      <Typography variant="h4" ml="2px" className={classes.title}>
-                          KotaHuis
-                      </Typography>
-                      </Box>
+
+    return (
+        <nav className={classes.root}>
+            <ThemeProvider theme={theme}>
+                <AppBar position="static" style={{ backgroundColor: "transparent", color: "black", boxShadow: "0px 0px 0px 0px" }}>
+                    <Toolbar >
+                        <Box pl="1rem" >
+                            <Typography variant="h4" ml="2px" className={classes.title}>
+                                KotaHuis
+                            </Typography>
+                        </Box>
 
 
-                    <Box pl="56rem" >
-                      <Button color="inherit">About</Button>
-                      <Button color="inherit">Contact</Button>
-                    </Box>
+                        <Box pl="62rem" >
+                            <Button color="inherit">About</Button>
+                            <Button color="inherit">Contact</Button>
+                        </Box>
 
-                  </Toolbar>
-              </AppBar>
-              </ThemeProvider>
+                    </Toolbar>
+                </AppBar>
+            </ThemeProvider>
         </nav>
-      );
-    
-  }
- 
+    );
+
+}
