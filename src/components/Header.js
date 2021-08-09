@@ -5,12 +5,9 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { createTheme } from '@material-ui/core/styles';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 
 const theme = createTheme({
     typography: {       
@@ -31,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
 }));
-
 
 export default function Header() {
 
