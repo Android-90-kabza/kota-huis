@@ -27,16 +27,21 @@ const useStyles = makeStyles((theme) => ({
     title: {
         flexGrow: 1,
     },
+    header: {
+        padding: theme.spacing(3, 2),
+        marginTop: 'auto',
+        backgroundColor:
+          theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[800],
+      },
 }));
 
 export default function Header() {
 
     const classes = useStyles();
       return (
-        <Container maxWidth="lg">
             <ThemeProvider theme={theme}>
             <div className={classes.root}>
-                    <AppBar position="static">
+                    <AppBar position="fixed">
                         <Toolbar>
                         <Typography variant="h6" align="left" className={classes.title}>
                             Kota-huis
@@ -48,7 +53,6 @@ export default function Header() {
                     </AppBar>
             </div>
             </ThemeProvider>
-        </Container>
       );
     
   }
