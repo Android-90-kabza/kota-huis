@@ -5,7 +5,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import Container from '@material-ui/core/Container';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { createTheme } from '@material-ui/core/styles';
 
@@ -21,11 +20,9 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
-    menuButton: {
-        marginRight: theme.spacing(2),
-    },
     title: {
         flexGrow: 1,
+        fontFamily: 'Fredoka One',
     },
     header: {
         padding: theme.spacing(3, 2),
@@ -44,7 +41,7 @@ export default function Header() {
                     <AppBar position="fixed">
                         <Toolbar>
                         <Typography variant="h6" align="left" className={classes.title}>
-                            Kota-huis
+                        Kota-huis
                         </Typography>
                         <Button color="inherit">Become a Partner</Button>
                         <Button color="inherit">Login</Button>
