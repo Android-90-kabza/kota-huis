@@ -6,18 +6,18 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
-
+import Container from '@material-ui/core/Container';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { createTheme } from '@material-ui/core/styles';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
 const theme = createTheme({
-    typography: {
-        
+    typography: {       
         fontFamily: [
-            'Mandali', 
-            "sans - serif"
+    'Fredoka One',
         ].join(','),
-    }
+    },
 });
 
 const useStyles = makeStyles((theme) => ({
@@ -33,34 +33,26 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-
-
-
 export default function Header() {
 
     const classes = useStyles();
-    
       return (
-          <nav className={classes.root}>
-              <ThemeProvider theme={theme}>
-              <AppBar position="static" style={{ backgroundColor: "transparent", color: "black", boxShadow: "0px 0px 0px 0px" }}>
-                  <Toolbar >
-                      <Box pl="1rem" >
-                      <Typography variant="h4" ml="2px" className={classes.title}>
-                          KotaHuis
-                      </Typography>
-                      </Box>
-
-
-                    <Box pl="56rem" >
-                      <Button color="inherit">About</Button>
-                      <Button color="inherit">Contact</Button>
-                    </Box>
-
-                  </Toolbar>
-              </AppBar>
-              </ThemeProvider>
-        </nav>
+        <Container maxWidth="lg">
+            <ThemeProvider theme={theme}>
+            <div className={classes.root}>
+                    <AppBar position="static">
+                        <Toolbar>
+                        <Typography variant="h6" align="left" className={classes.title}>
+                            Kota-huis
+                        </Typography>
+                        <Button color="inherit">Become a Partner</Button>
+                        <Button color="inherit">Login</Button>
+                        <Button color="inherit">Contact us</Button>
+                        </Toolbar>
+                    </AppBar>
+            </div>
+            </ThemeProvider>
+        </Container>
       );
     
   }
