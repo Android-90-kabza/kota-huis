@@ -20,6 +20,11 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
+    look: {
+        backgroundColor: "transparent", 
+        color: 'black', 
+        boxShadow: "0px 0px 0px 0px",
+    },
     title: {
         flexGrow: 1,
         fontFamily: 'Fredoka One',
@@ -27,8 +32,6 @@ const useStyles = makeStyles((theme) => ({
     header: {
         padding: theme.spacing(3, 2),
         marginTop: 'auto',
-        backgroundColor:
-          theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[800],
       },
 }));
 
@@ -38,7 +41,7 @@ export default function Header() {
       return (
             <ThemeProvider theme={theme}>
             <div className={classes.root}>
-                    <AppBar position="fixed">
+                    <AppBar position="fixed" className={classes.look}>
                         <Toolbar>
                         <Typography variant="h6" align="left" className={classes.title}>
                         Kota-huis
