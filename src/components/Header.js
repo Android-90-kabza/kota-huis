@@ -7,18 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 
-import { ThemeProvider } from '@material-ui/core/styles';
-import { createTheme } from '@material-ui/core/styles';
 
-const theme = createTheme({
-    typography: {
-
-        fontFamily: [
-            'Mandali',
-            "sans - serif"
-        ].join(','),
-    }
-});
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -42,8 +31,8 @@ export default function Header() {
 
     return (
         <nav className={classes.root}>
-            <ThemeProvider theme={theme}>
-                <AppBar position="static" style={{ backgroundColor: "transparent", color: "black", boxShadow: "0px 0px 0px 0px" }}>
+            
+                <AppBar position="static" style={{ backgroundColor: "transparent", color: "black" }}>
                     <Toolbar >
                         <Box pl="1rem" >
                             <Typography variant="h4" ml="2px" className={classes.title}>
@@ -59,7 +48,7 @@ export default function Header() {
 
                     </Toolbar>
                 </AppBar>
-            </ThemeProvider>
+            
         </nav>
     );
 
