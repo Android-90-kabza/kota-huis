@@ -9,7 +9,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import SwipeableViews from 'react-swipeable-views';
 import TextField from '@material-ui/core/TextField';
-
+import Button from '@material-ui/core/Button';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -23,7 +23,7 @@ function TabPanel(props) {
       aria-labelledby={`action-tab-${index}`}
       {...other}
     >
-      {value === index && <Box p={3}>{children}</Box>}
+      {value === index && <Box p={2}>{children}</Box>}
     </Typography>
   );
 }
@@ -38,14 +38,14 @@ const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
       backgroundColor: theme.palette.background.paper,
-      width: 500,
+      width: 400,
       position: 'relative',
-      minHeight: 200,
+      minHeight: 300,
     },
     fab: {
       position: 'absolute',
       bottom: theme.spacing(2),
-      right: theme.spacing(2),
+      right: theme.spacing(1),
     },
     fabGreen: {
       color: theme.palette.common.white,
@@ -92,17 +92,16 @@ export default function Login() {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-        <form className={classes.root} noValidate autoComplete="off">
+    
         <TextField label="username" fullWidth required/>
         <TextField label='Password' type='password' fullWidth required/>
-        </form>
+        <Button variant="contained" disabled fullWidth required>Login</Button>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-        <form className={classes.root} noValidate autoComplete="off">
-        <TextField label="name" fullWidth required/>
-        <TextField label="surname" fullWidth required/>
-        <TextField label="mobile number" placeholder="0831231233" fullWidth required/>
-        </form>
+                  <TextField label="name" placeholder="name" fullWidth required/>
+              <TextField label="surname" placeholder="surname" fullWidth required/>
+              <TextField label="mobile number" placeholder="0831231233" fullWidth required/>
+              <Button variant="contained" disabled fullWidth required>Register</Button>
         </TabPanel>
       </SwipeableViews>
     </div>
