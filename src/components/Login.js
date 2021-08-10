@@ -98,7 +98,7 @@ export default function Login() {
         <Button variant="contained" disabled fullWidth required>Login</Button>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-                  <TextField label="name" placeholder="name" fullWidth required/>
+              <TextField label="name" placeholder="name" fullWidth required/>
               <TextField label="surname" placeholder="surname" fullWidth required/>
               <TextField label="mobile number" placeholder="0831231233" fullWidth required/>
               <Button variant="contained" disabled fullWidth required>Register</Button>
