@@ -29,10 +29,11 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
   },
   footer: {
-    padding: theme.spacing(3, 2),
+    padding: theme.spacing(3,2),
     marginTop: 'auto',
-    backgroundColor:
-      theme.palette.type === 'light' ? theme.palette.grey[300] : theme.palette.grey[900],
+    backgroundColor: "transparent",
+    boxShadow: " 0px 0px 10px 0px"
+
   },
 }));
 
